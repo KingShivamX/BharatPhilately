@@ -1,22 +1,23 @@
-import React  from "react"
-import { createBrowserRouter } from "react-router-dom"
+import React from "react"
+
 import Home from "./pages/home/Home"
 import Login from "./pages/auth/Login/Login"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 function App() {
 
   const router = createBrowserRouter([
     {
-      path:'/',
-      element:<Home />
+      path: '/',
+      element: <Home />
     },
     {
-      path:'/home',
-      element:<Home />
+      path: '/home',
+      element: <Home />
     },
     {
-      path:'/login',
-      element:<Login />
+      path: '/login',
+      element: <Login />
     }
   ])
 
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
   )
 }

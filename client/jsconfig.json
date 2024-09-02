@@ -2,9 +2,9 @@
     "compilerOptions": {
       "target": "ES6",
       "module": "ESNext",
-      "baseUrl": "./src",
+      "baseUrl": ".",
       "paths": {
-        "@/*": ["*"]
+        "@/*": ["./src/*"]
       }
     },
     "include": ["src"]
