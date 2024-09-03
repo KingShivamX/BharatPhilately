@@ -9,10 +9,9 @@ A website that consolidates philatelic material from all postal circles across I
 ## IMPORTANT PONTS:
 ### make folder for each page and keep it's file.jsx
 ### keep the frontend part ready and keep the forms for auth ready with all required fields..
-### mention the update below (mostly for some major updates..)
-also mention your branches...
 
-
+### backend setup + MongoDB Atlas Cluster Created 
+### .env file is pushed too, repo will be private
 
 ## TASKS: 
 ```
