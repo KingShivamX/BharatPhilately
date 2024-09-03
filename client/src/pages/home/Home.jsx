@@ -1,10 +1,9 @@
-import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const Home = () => {
   return (
     <div className='container mx-auto'>
-      <Button>Home</Button>
+      <h1 className='text-xl font-bold'>This is Home Page</h1>
     </div>
   )
 }

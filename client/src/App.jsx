@@ -3,6 +3,7 @@ import React from "react"
 import Home from "./pages/home/Home"
 import Login from "./pages/auth/Login/Login"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Register from "./pages/auth/register/Register"
 
 function App() {
 
@@ -12,11 +13,11 @@ function App() {
       element: <Home />
     },
     {
-      path: '/home',
-      element: <Home />
+      path: '/auth/register',
+      element: <Register />
     },
     {
-      path: '/login',
+      path: '/auth/login',
       element: <Login />
     }
   ])
