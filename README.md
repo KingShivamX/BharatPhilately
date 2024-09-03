@@ -11,7 +11,7 @@ A website that consolidates philatelic material from all postal circles across I
 ### keep the frontend part ready and keep the forms for auth ready with all required fields..
 
 ### backend setup + MongoDB Atlas Cluster Created 
-### .env file is pushed too, repo will be private
+### .env file is pushed too, repo will be private (main branch soo far) 
 
 ## TASKS: 
 ```
