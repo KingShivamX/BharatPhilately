@@ -4,36 +4,23 @@
 require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require("path");
 const AuthRoutes = require('./routes/auth-routes');
+const connectDB = require('./config/db')
 
-///////////////////////////////////////////////////////////////
-// express 
+
 const app = express();
-const port = 3000;
+
+connectDB();
+
+app.use(express.json());
+app.use('/api/auth', AuthRoutes)
 
 
-app.use('/auth',AuthRoutes)
-
-
-// express live listning setup
-app.listen(port, () => {
-    console.log(`Port is Listening at: ${port}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Port is Listening at: ${process.env.PORT}`);
 });
 
-///////////////////////////////////////////////////////////////
-// mondoDB
-const dburl = process.env.ATLASDB;
-const connectBD = async () => {
-    await mongoose.connect(dburl);
-}
 
-connectBD()
-.then(()=> (console.log("Connection Established")))
-.catch((err)=> (console.log(err)));
-
-///////////////////////////////////////////////////////////////
-// middlewares
 
 
 
