@@ -13,6 +13,14 @@ A website that consolidates philatelic material from all postal circles across I
 ### backend setup + MongoDB Atlas Cluster Created 
 ### .env file is pushed too, repo will be private (main branch soo far) 
 
+## NOTES:
+```
+
+1.Keep name of collection in uppercase.. eg. USER_DATA/ POSTS_DAT/POSTS_DB..
+
+2.If you are using any new library kindly.. add the name in the updates section..
+```
+
 ## TASKS: 
 ```
 1.Login page

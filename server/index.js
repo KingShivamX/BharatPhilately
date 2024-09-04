@@ -5,11 +5,16 @@ require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const AuthRoutes = require('./routes/auth-routes');
 
 ///////////////////////////////////////////////////////////////
 // express 
 const app = express();
 const port = 3000;
+
+
+app.use('/auth',AuthRoutes)
+
 
 // express live listning setup
 app.listen(port, () => {

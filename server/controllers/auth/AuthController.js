@@ -1,8 +1,7 @@
-const dotenv = require('dotenv');
-dotenv.config();
-const User = require("../models/UserSchema");
+require('dotenv').config();
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const User = require('../../models/UserSchema');
 
 // register 
 // remaining
@@ -25,7 +24,7 @@ const login = async (req, res) => {
       });
     }
 
-    const checkPassword = await bcryptjs.compare(password, user.password);
+    const checkPassword = await bcryptjs.compare(password, User.password);
     if (!checkPassword) {
       return res.status(409).json({
         success: false,
