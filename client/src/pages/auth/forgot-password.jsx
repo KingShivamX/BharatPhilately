@@ -1,6 +1,6 @@
 import { Form, Input } from "antd";
 import React from 'react'
-import { Button } from '@/components/ui/button';
+import { Button } from "antd";
 import { MdKeyboardBackspace } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const ForgotPasswordPage = () => {
   return (
     <div className="flex items-center justify-center lg:justify-end relative min-h-screen">
       <div className="hidden lg:block">
-        <div className="w-[843px] h-[843px] rounded-full bg-[#539BBB] absolute z-10 -top-[206px] -left-[342px]" />
+        <div className="w-[843px] h-[843px] rounded-full bg-secondary absolute z-10 -top-[206px] -left-[342px]" />
         <div className="absolute left-[5%] top-[15%] z-10">
           <h1 className="text-[40px] w-[325px] font-medium text-white">
             Explore <br /> Collect <br /> Showcase <br /> Trade
@@ -20,7 +20,7 @@ const ForgotPasswordPage = () => {
 
       <div className="flex items-center justify-center md:w-[50%] flex-col bg-white p-6 lg:bg-transparent rounded-lg">
         <div className="flex items-center justify-center flex-col space-y-2">
-          <h1 className="text-2xl font-medium text-[#2F667F]">
+          <h1 className="text-2xl font-medium text-primary">
             Forgot password?
           </h1>
           <p className="text-sm">
@@ -35,7 +35,7 @@ const ForgotPasswordPage = () => {
           <Form.Item
             name="email"
             className="w-full"
-            label={<span className="text-[#2F667F] font-medium">Email</span>}
+            label={<span className="text-primary font-medium">Email</span>}
             rules={[
               {
                 type: "email",
@@ -49,7 +49,7 @@ const ForgotPasswordPage = () => {
 
           <div className="flex items-center justify-center w-full">
             <Button
-              type="[#2F667F]"
+              type="primary"
               className="w-full px-6 ring-0 rounded-full"
               htmlType="submit"
             >
@@ -60,7 +60,7 @@ const ForgotPasswordPage = () => {
 
         <button
           onClick={backToSignIn}
-          className="flex items-center justify-center space-x-1 text-sm mt-4 text-center text-[#539BBB] hover:text-[#539BBB]/80 hover:underline transition-all"
+          className="flex items-center justify-center space-x-1 text-sm mt-4 text-center text-secondary hover:text-secondary/80 hover:underline transition-all"
         >
           <MdKeyboardBackspace />
           <span>Back to sign in</span>

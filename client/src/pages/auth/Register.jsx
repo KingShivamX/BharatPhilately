@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { Form, Input } from "antd";
 import React from 'react'
-import { Button } from '@/components/ui/button';
+import { Button } from "antd";
 
 const Register = () => {
   return (
     <div className="flex items-center justify-center lg:justify-end relative min-h-screen">
       <div className="hidden lg:block">
-        <div className="w-[843px] h-[843px] rounded-full bg-[#539BBB] absolute z-10 -top-[206px] -left-[342px]" />
+        <div className="w-[843px] h-[843px] rounded-full bg-secondary absolute z-10 -top-[206px] -left-[342px]" />
         <div className="absolute left-[5%] top-[15%] z-10">
           <h1 className="text-[40px] w-[325px] font-medium text-white">
             Explore <br /> Collect <br /> Showcase <br /> Trade
@@ -18,11 +18,11 @@ const Register = () => {
         <div className="flex items-center justify-center flex-col">
           <div className="flex items-center justify-center space-x-3">
             {/* <Logo /> */}
-            <span className="text-4xl font-bold text-[#2F667F]">
+            <span className="text-4xl font-bold text-primary">
               BharatPhilately
             </span>
           </div>
-          <p className="text-sm text-[#2F667F]">
+          <p className="text-sm text-primary">
             Welcome back, sign in your account
           </p>
         </div>
@@ -34,7 +34,7 @@ const Register = () => {
           <Form.Item
             name="fullName"
             className="w-full"
-            label={<span className="text-[#2F667F] font-medium">Full Name</span>}
+            label={<span className="text-primary font-medium">Full Name</span>}
             rules={[
               { required: true, message: "Full name should be required" },
             ]}
@@ -45,7 +45,7 @@ const Register = () => {
           <Form.Item
             name="email"
             className="w-full"
-            label={<span className="text-[#2F667F] font-medium">Email</span>}
+            label={<span className="text-primary font-medium">Email</span>}
             rules={[
               {
                 type: "email",
@@ -59,7 +59,7 @@ const Register = () => {
 
           <div className="flex items-center justify-center w-full">
             <Button
-              className="w-full px-6 bg-[#2f667f] hover:bg-[#3d7e9c] ring-0 rounded-full"
+              className="w-full px-6 bg-primary hover:bg-[#3d7e9c] ring-0 rounded-full"
               htmlType="submit"
             >
               Sign Up
@@ -71,7 +71,7 @@ const Register = () => {
           Already have an account?
           <Link
             to="/auth/login"
-            className="text-[#539BBB] hover:text-[#2F667F] hover:underline pl-2 "
+            className="text-secondary hover:text-primary hover:underline pl-2 "
           >
             Sign In
           </Link>
@@ -79,7 +79,7 @@ const Register = () => {
 
         <Link
           to="/auth/forgot-password"
-          className="text-[#2F667F] hover:text-[#539BBB] transition mt-4 text-sm hover:underline"
+          className="text-primary hover:text-secondary transition mt-4 text-sm hover:underline"
         >
           Forgot password?
         </Link>
