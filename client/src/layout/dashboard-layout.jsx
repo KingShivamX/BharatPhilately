@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Avatar, Input } from "antd";
 import DashboardSidebar from "@/components/dashboard/dash-sidebar";
-import { Link } from "react-router-dom";
 
 const isAuthenticated = false;
 const user = {
@@ -21,36 +20,14 @@ const DashboardLayout = () => {
             />
           </div>
           <div className="flex items-center justify-center space-x-4">
-            {
-              !isAuthenticated && (
-                <>
-                  <Link
-                    to="/auth/login"
-                    className="px-4 py-[0.19rem] text-sm text-center bg-primary hover:bg-[#3d7e9c] text-white rounded-full transition-all duration-300"
-                  >
-                    Log In
-                  </Link>
-                  <Link
-                    to="/auth/register"
-                    className="px-4 py-[0.19rem] text-sm text-center bg-primary hover:bg-[#3d7e9c] text-white rounded-full transition-all duration-300"
-                  >
-                    Sign Up
-                  </Link>
-                </>
-              )
-            }
-            {
-              isAuthenticated && (
-                <div className="flex items-center justify-center space-x-1">
-                  <Avatar className="bg-primary">
-                    {user?.fullName[0].toUpperCase()}
-                  </Avatar>
-                  <span className="text-primary text-sm font-medium hidden md:block">
-                    {user?.fullName}
-                  </span>
-                </div>
-              )
-            }
+            <div className="flex items-center justify-center space-x-1">
+              <Avatar className="bg-primary">
+                {user?.fullName[0].toUpperCase()}
+              </Avatar>
+              <span className="text-primary text-sm font-medium hidden md:block">
+                {user?.fullName}
+              </span>
+            </div>
           </div>
 
         </div>
