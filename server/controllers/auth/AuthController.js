@@ -26,7 +26,6 @@ const sendVerificationEmailForRegistration = async (req, res) => {
 
     const emailResponse = await mailSender(email, "BharatPhilately create new password and verify email", htmlTemplates.verifyEmail(fullName, verificationLink));
 
-    console.log(emailResponse);
 
     return res.status(200).json({
       success: true,
@@ -118,6 +117,71 @@ const login = async (req, res) => {
   }
 }
 
+const forgotPassword = async (req, res) => {
+  const { email } = req.body;
+  if (!email) {
+    return res.status(400).json({ success: false, message: "Email is required" });
+  }
+
+  const user = await User.findOne({ email });
+  if (!user) {
+    return res.status(404).json({ success: false, message: "User not found" });
+  }
+
+  const payLoad = { userId: user._id };
+  const verifyEmailToken = jwt.sign(payLoad, process.env.JWT_SECRET, { expiresIn: "30m" });
+
+  if (!verifyEmailToken) return res.status(500).json({ success: false, message: "Error creating token" });
+
+  const verificationLink = `${process.env.FRONTEND_URL}${URLS.resetPasswordUrl}?token=${verifyEmailToken}`;
+
+  const emailResponse = await mailSender(email, "BharatPhilately create new password", htmlTemplates.resetPassword(user.fullName, verificationLink));
+
+
+  return res.status(200).json({
+    success: true,
+    message: "Verification email sent successfully.",
+    token: verifyEmailToken
+  });
+}
+
+const resetPassword = async (req, res) => {
+  const { password, confirmPassword, token } = req.body;
+  if (password !== confirmPassword) {
+    return res.status(400).json({ success: false, message: "Passwords do not match" });
+  }
+
+  const user = await jwt.verify(token, process.env.JWT_SECRET);
+  if (!user || !user.userId)
+    return res.status(400).json({ success: false, message: "Invalid token || token is Expired" });
+
+  const existedUser = await User.findById(user.userId);
+  if (!existedUser) {
+    return res.status(404).json({ success: false, message: "User not found" });
+  }
+
+  const hashPassword = await bcryptjs.hash(password, 10);
+  console.log("hashPassword: ", hashPassword);
+
+  const updatedUser = await User.findByIdAndUpdate({
+    _id: existedUser._id
+  }, {
+    password: hashPassword
+  }, { new: true })
+
+  console.log("updatedUser: ", updatedUser);
+
+  const jwtToken = jwt.sign({ userId: existedUser._id, role: existedUser.role }, process.env.JWT_SECRET);
+  console.log("jwtToken: ", jwtToken);
+
+  return res.status(200).json({
+    success: true,
+    message: "Password created successfully and logged in successfully",
+    user: updatedUser,
+    token: jwtToken,
+  })
+
+}
 
 // logout 
 const logout = async (req, res) => {
@@ -127,4 +191,4 @@ const logout = async (req, res) => {
 };
 
 
-module.exports = { login, logout, sendVerificationEmailForRegistration, createPassword };
+module.exports = { login, logout, sendVerificationEmailForRegistration, createPassword, forgotPassword, resetPassword };
