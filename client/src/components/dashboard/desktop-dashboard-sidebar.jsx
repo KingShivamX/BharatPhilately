@@ -33,6 +33,7 @@ const DesktopDashboardSidebar = () => {
                 <span className="pl-4 text-lg text-white font-light tracking-wider">
                   {link.title}
                 </span>
+                
               </NavLink>
             ))}
         </div>

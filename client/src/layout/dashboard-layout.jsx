@@ -4,7 +4,7 @@ import DashboardSidebar from "@/components/dashboard/dash-sidebar";
 
 const isAuthenticated = false;
 const user = {
-  fullName: "Krish Mungase",
+  fullName: "King",
 };
 const DashboardLayout = () => {
   return (
@@ -32,7 +32,7 @@ const DashboardLayout = () => {
 
         </div>
 
-        <div className="h-[calc(100vh_-48px)] p-5 bg-white">
+        <div className="flex-1 overflow-y-auto bg-white">
           <Outlet />
         </div>
       </div>
