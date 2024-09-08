@@ -20,22 +20,3 @@ app.listen(process.env.PORT, () => {
     console.log(`Port is Listening at: ${process.env.PORT}`);
 });
 
-
-
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////
-// RESTful API's
-
-
-
-
-
-
-
-
