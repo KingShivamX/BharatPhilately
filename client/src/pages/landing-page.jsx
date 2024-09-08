@@ -21,14 +21,14 @@ const LandingPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-          <Link to={'/auth/login'}>
+          <Link to={'/dashboard/home'}>
             <Button className="px-6 py-3 text-white bg-gray-800 rounded-lg shadow-md hover:bg-gray-900 transition duration-300 ease-in-out">
               Get Started
             </Button>
           </Link>
           <Link to={'/auth/register'}>
             <Button className="px-6 py-3   rounded-lg shadow-md transition duration-300 ease-in-out">
-              Explore Community
+              Signin / Signup
             </Button>
           </Link>
         </div>
