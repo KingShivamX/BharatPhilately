@@ -3,6 +3,8 @@ import { Button } from 'antd';
 import React from 'react'
 import { Link } from "react-router-dom";
 import Footer from './common/footer';
+import LandingPageFeatures from '@/config/landing-features';
+import LandingPageSpotlight from '@/config/landing-spotlight';
 
 
 const LandingPage = () => {
@@ -30,9 +32,9 @@ const LandingPage = () => {
               Get Started
             </Button>
           </Link>
-          <Link to={'#'}>
+          <Link to={'/auth/register'}>
             <Button className="px-6 py-3   rounded-lg shadow-md transition duration-300 ease-in-out">
-              Explore Collection
+              Explore Community
             </Button>
           </Link>
         </div>
@@ -66,39 +68,46 @@ const LandingPage = () => {
           Access philatelic material from across India, order online, and stay updated with the latest releases, all in one place.
         </p>
         <Link to={'/auth/register'}>
-          <Button className="px-8 py-4 text-white bg-teal-500 rounded-full shadow-lg hover:bg-teal-600 transition-transform transform hover:scale-105 duration-300 ease-in-out">
+          <Button className="px-8 py-4 text-white bg-gray-800 rounded-full shadow-lg hover:bg-gray-900 transition-transform transform hover:scale-105 duration-300 ease-in-out">
             Create an Account
           </Button>
         </Link>
       </div>
 
 
-
+      {/* section 3 */}
       <div className="py-16">
         <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">Why Choose Bharat Philately?</h2>
         <div className="grid grid-cols-1 max-w-4xl md:grid-cols-2 gap-8 text-center mx-auto">
-          <div className="p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-            <h3 className="text-3xl font-semibold ">Centralized Access</h3>
-            <p className="text-gray-700 mt-4">Explore philatelic material released by all postal circles across India in one place.</p>
-          </div>
-          <div className="p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-            <h3 className="text-3xl font-semibold ">Online Ordering & Payment</h3>
-            <p className="text-gray-700 mt-4">Order and pay for philatelic items easily with secure online transactions.</p>
-          </div>
-          <div className="p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-            <h3 className="text-3xl font-semibold">Reliable Postal Services</h3>
-            <p className="text-gray-700 mt-4">Get your orders delivered with Registered or Speedpost services at standard rates.</p>
-          </div>
-          <div className="p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-            <h3 className="text-3xl font-semibold">Stay Updated</h3>
-            <p className="text-gray-700 mt-4">Receive the latest updates on cancellation releases and other services.</p>
-          </div>
+          {
+            LandingPageFeatures.map((feature) => (
+              <div key={feature.id} className="p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img src={feature.path} alt="Centralized Access" className="w-12 mx-auto mb-4" />
+                <h3 className="text-3xl font-semibold">{feature.title}</h3>
+                <p className="text-gray-700 mt-4">{feature.description}</p>
+              </div>
+            ))
+          }
         </div>
       </div>
 
 
+      {/* section 4*/}
+      <div className="py-16">
+        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8">Philatelist Spotlight</h2>
+        <div className="flex flex-wrap justify-center gap-8">
+          {
+            LandingPageSpotlight.map((spotlight) => (
+              <div key={spotlight.id} className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 max-w-xs">
+                <img src={spotlight.image} alt="Philatelist 1" className="w-full h-48 object-contain" />
+                <h3 className="text-2xl font-bold mt-4 text-gray-800">{spotlight.name}</h3>
+                <p className="text-gray-700 mt-2">{spotlight.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
 
-      {/* footer section */}
       <Footer />
     </div>
   )

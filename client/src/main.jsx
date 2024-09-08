@@ -4,11 +4,18 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from "react-redux";
 import store from './store/store.js';
+import { ConfigProvider } from "antd";
 
 createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </BrowserRouter>
+    <ConfigProvider
+        theme={{
+            token: { colorPrimary: "#2F667F" },
+        }}
+    >
+        <BrowserRouter>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </BrowserRouter>
+    </ConfigProvider>
 );

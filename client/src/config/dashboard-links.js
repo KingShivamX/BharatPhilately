@@ -7,25 +7,25 @@ const dashboardLinks = [
   {
     id: 1,
     title: "Home",
-    path: "/",
+    path: "home",
     icon: HiHome,
   },
   {
     id: 2,
     title: "Community",
-    path: "/community",
+    path: "community",
     icon: IoPeopleOutline,
   },
   {
     id: 3,
     title: "Notifications",
-    path: "/notifications",
+    path: "notifications",
     icon: IoMdNotifications
   },
   {
     id: 4,
     title: "Messaging",
-    path: "/messaging",
+    path: "messaging",
     icon: BiMessageRounded
   },
 ];
