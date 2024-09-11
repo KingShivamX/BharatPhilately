@@ -2,8 +2,16 @@ import { Link } from 'react-router-dom'
 import { Form, Input } from "antd";
 import React from 'react'
 import { Button } from "antd";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const HandleNavigate = () => {
+    console.log("Navigate");
+    navigate('/dashboard/home');
+  };
+
   return (
     <div className="flex items-center justify-center lg:justify-end relative min-h-screen">
       <div className="hidden lg:block">
@@ -57,8 +65,9 @@ const Login = () => {
 
           <div className="flex items-center justify-center w-full">
             <Button
-              className="w-full px-6 bg-primary hover:bg-[#3d7e9c] ring-0 rounded-full"
+              className="w-full px-6 text-white bg-primary hover:bg-[#3d7e9c] ring-0 rounded-full"
               htmlType="submit"
+              onClick={HandleNavigate}
             >
               Sign In
             </Button>
@@ -81,8 +90,8 @@ const Login = () => {
         >
           Forgot password?
         </Link>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 

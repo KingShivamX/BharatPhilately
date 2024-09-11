@@ -4,7 +4,7 @@ import DashboardSidebar from "@/components/dashboard/dash-sidebar";
 
 const isAuthenticated = false;
 const user = {
-  fullName: "King",
+  fullName: "Krish Mungase",
 };
 const DashboardLayout = () => {
   return (

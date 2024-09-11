@@ -13,22 +13,22 @@ const Home = () => {
     <div className='h-fit w-full'>
       {/* Hero Section */}
       <div className="py-4 px-2 text-center h-fit w-full flex justify-center flex-col items-center">
-        <div className='m-2 text-2xl md:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-700 to-[#2F667F]'>
+        <div className='m-2 text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600'>
           Preserving Heritage
         </div>
-        <div className='mb-2 font-mediums text-sm text-center' >
+        <div className='mb-2 font-medium text-gray-600 text-sm text-center' >
           Uncover the rich history and culture behind each stamp.
         </div>
       </div>
 
       {/* stamps */}
       <div className="h-fit w-full p-2 sm:p-4">
-        
-         {/* Featured */}
+
+        {/* Featured */}
         <div className="mb-8 w-full">
           <div className='text-xl md:text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#234d61] to-black'>Featured Stamps</div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-          {getLimitedStamps("Featured").map(stp => (<StampCard key={stp.id} stp={stp}/>))}
+            {getLimitedStamps("Featured").map(stp => (<StampCard key={stp.id} stp={stp} />))}
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const Home = () => {
         <div className="mb-8 w-full">
           <div className='text-xl md:text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#234d61] to-black'>Rare Stamps</div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-          {getLimitedStamps("Rare").map(stp => (<StampCard key={stp.id} stp={stp}/>))}
+            {getLimitedStamps("Rare").map(stp => (<StampCard key={stp.id} stp={stp} />))}
           </div>
         </div>
 
@@ -44,7 +44,7 @@ const Home = () => {
         <div className="mb-8 w-full">
           <div className='text-xl md:text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#234d61] to-black'>Latest Release</div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-          {getLimitedStamps("Latest Release").map(stp => (<StampCard key={stp.id} stp={stp}/>))}
+            {getLimitedStamps("Latest Release").map(stp => (<StampCard key={stp.id} stp={stp} />))}
           </div>
         </div>
 
@@ -52,12 +52,12 @@ const Home = () => {
         <div className="mb-8 w-full">
           <div className='text-xl md:text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#234d61] to-black'>Popular Stamps</div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-          {getLimitedStamps("Popular").map(stp => (<StampCard key={stp.id} stp={stp}/>))}
+            {getLimitedStamps("Popular").map(stp => (<StampCard key={stp.id} stp={stp} />))}
           </div>
         </div>
 
-      </div>  
-     
+      </div>
+
     </div>
   )
 }

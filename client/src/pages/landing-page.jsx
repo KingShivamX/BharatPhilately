@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Footer from './common/footer';
 import LandingPageFeatures from '@/config/landing-features';
 import LandingPageSpotlight from '@/config/landing-spotlight';
+import GradualSpacing from "@/components/magicui/gradual-spacing";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const LandingPage = () => {
   return (
@@ -12,26 +14,32 @@ const LandingPage = () => {
       {/* section 1 */}
       <div className="py-16 flex flex-col items-center justify-center space-y-8">
         <div className="text-center">
-          <div className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600">
+          <GradualSpacing
+            className="text-5xl md:text-6xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600"
+            text="Bharat Philately"
+          />
+          {/* <div className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600">
             Bharat Philately
-          </div>
+          </div> */}
           <div className="text-gray-600 text-center mt-4 text-sm md:text-md max-w-3xl mx-auto">
             Bharat Philately is a premier platform dedicated to Indian stamp collectors, showcasing India's rich postal history, cultural heritage, and rare philatelic material.
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-          <Link to={'/dashboard/home'}>
+          <Link to={'/auth/login'}>
             <Button className="px-6 py-3 text-white bg-gray-800 rounded-lg shadow-md hover:bg-gray-900 transition duration-300 ease-in-out">
               Get Started
+              <IoIosArrowRoundForward className="size-5" />
             </Button>
           </Link>
           <Link to={'/auth/register'}>
             <Button className="px-6 py-3   rounded-lg shadow-md transition duration-300 ease-in-out">
-              Signin / Signup
+              explore community
             </Button>
           </Link>
         </div>
+
 
         {/* CARDs */}
         <div className="w-full mt-12">
@@ -64,6 +72,7 @@ const LandingPage = () => {
         <Link to={'/auth/register'}>
           <Button className="px-8 py-4 text-white bg-gray-800 rounded-full shadow-lg hover:bg-gray-900 transition-transform transform hover:scale-105 duration-300 ease-in-out">
             Create an Account
+            <IoIosArrowRoundForward className="size-5" />
           </Button>
         </Link>
       </div>
