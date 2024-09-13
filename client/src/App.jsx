@@ -13,20 +13,59 @@ import Community from "./components/dashboard/community/index"
 import Notifications from "./components/dashboard/notifications/index"
 import Messaging from "./components/dashboard/messaging/index"
 import LandingPage from "./pages/landing-page"
+import ProtectedRoute from "./layout/protectedroute"
 
+
+const user = {
+  fullname: "Krish Mungase"
+};
+const isAuthenticated = true;
 function App() {
+
   return (
     <div className="min-h-screen w-full">
       <div className='flex flex-col overflow-hidden bg-white '>
-        <Routes path='/'>
+        <Routes path='/' >
           <Route path="/" element={<LandingPage />} />
-          <Route path="/dashboard" element={<DashboardLayout />}>
-            <Route path="home" element={<Home />} />
-            <Route path="community" element={<Community />} />
-            <Route path="notifications" element={<Notifications />} />
-            <Route path="messaging" element={<Messaging />} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+              <DashboardLayout />
+            </ProtectedRoute>}
+          >
+            <Route
+              path="home"
+              element={
+                <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="community"
+              element={
+                <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+                  <Community />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="notifications"
+              element={
+                <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+                  <Notifications />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="messaging"
+              element={
+                <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+                  <Messaging />
+                </ProtectedRoute>
+              }
+            />
           </Route>
-          <Route path="/auth" element={<GuestRoute />}>
+          <Route path="/auth">
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
@@ -36,17 +75,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
-    </div>
-  )
-}
-
-
-const isAuthenticated = false;
-const user = null;
-
-const GuestRoute = () => {
-  return (
-    isAuthenticated ? <Navigate to='/profile' /> : <Outlet />
+    </div >
   )
 }
 

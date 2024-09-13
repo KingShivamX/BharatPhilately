@@ -2,13 +2,13 @@ const LandingPageCards = [
   {
     id: "1",
     title: "Collection 1",
-    path: "/img/image1.jpeg",
+    path: "/img/image1.jpg",
     description: "Discover unique stamps from different regions of India in this visually stunning collection, celebrating the diversity of Indian postal history.",
   },
   {
     id: "2",
     title: "Collection 2",
-    path: "/img/image2.jpeg",
+    path: "/img/image2.jpg",
     description: "Discover unique stamps from different regions of India in this visually stunning collection, celebrating the diversity of Indian postal history.",
   },
   {
