@@ -14,6 +14,7 @@ import Notifications from "./components/dashboard/notifications/index"
 import Messaging from "./components/dashboard/messaging/index"
 import LandingPage from "./pages/landing-page"
 import ProtectedRoute from "./layout/protectedroute"
+import ProfilePage from "./pages/Profile/Profile"
 
 
 const user = {
@@ -39,7 +40,7 @@ function App() {
                   <Home />
                 </ProtectedRoute>
               }
-            />
+            />            
             <Route
               path="community"
               element={
@@ -64,6 +65,14 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
+            <Route path="profile" element={
+               <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+               <ProfilePage />
+             </ProtectedRoute>
+            }
+            />
+
           </Route>
           <Route path="/auth">
             <Route path="login" element={<Login />} />

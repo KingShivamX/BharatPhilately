@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet , Link} from "react-router-dom";
 import { Avatar, Input } from "antd";
 import DashboardSidebar from "@/components/dashboard/dash-sidebar";
 
@@ -20,14 +20,16 @@ const DashboardLayout = () => {
             />
           </div>
           <div className="flex items-center justify-center space-x-4">
+            <Link to={'/dashboard/profile'}>
             <div className="flex items-center justify-center space-x-1">
               <Avatar className="bg-primary">
                 {user?.fullName[0].toUpperCase()}
               </Avatar>
-              <span className="text-primary text-sm font-medium hidden md:block">
-                {user?.fullName}
-              </span>
+              {/* <span className="text-primary text-sm font-medium hidden md:block">
+              </span> */}
             </div>
+            </Link>
+
           </div>
 
         </div>
