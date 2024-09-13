@@ -1,7 +1,7 @@
 import React from 'react'
 import stamps from "../../../config/stamps-sample-schema"
-import { Avatar, Card } from 'antd'
 import StampCard from './StampCard'
+import LatestNews from './latestNews'
 
 const Home = () => {
 
@@ -19,6 +19,10 @@ const Home = () => {
         <div className='mb-2 font-medium text-gray-600 text-sm text-center' >
           Uncover the rich history and culture behind each stamp.
         </div>
+      </div>
+
+      <div>
+        <LatestNews />
       </div>
 
       {/* stamps */}
