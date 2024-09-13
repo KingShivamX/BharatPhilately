@@ -13,6 +13,7 @@ import Community from "./components/dashboard/community/index"
 import Notifications from "./components/dashboard/notifications/index"
 import Messaging from "./components/dashboard/messaging/index"
 import LandingPage from "./pages/landing-page"
+import ProfilePage from "./components/dashboard/profile/Profile-page"
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
             <Route path="community" element={<Community />} />
             <Route path="notifications" element={<Notifications />} />
             <Route path="messaging" element={<Messaging />} />
+            <Route path="profile" element={<ProfilePage />} />
           </Route>
+
+
           <Route path="/auth" element={<GuestRoute />}>
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
