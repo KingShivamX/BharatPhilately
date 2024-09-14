@@ -4,7 +4,7 @@ import React from 'react'
 const StampCard = ({ stp }) => {
 
     return (
-        <div className="h-[20rem] w-full rounded-md cursor-pointer shadow-md overflow-hidden relative border transition">
+        <div className="h-[20rem] w-full rounded-md cursor-pointer shadow-md overflow-hidden relative border transition-all duration-300 ease-in-out hover:scale-105">
             <div className='w-full h-[50%] flex justify-center px-4 pt-2'>
                 <img className='h-full rounded-sm object-contain' src={stp.imageUrl} alt="Stamp" />
             </div>

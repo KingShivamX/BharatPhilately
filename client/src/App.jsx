@@ -14,8 +14,8 @@ import Notifications from "./components/dashboard/notifications/index"
 import Messaging from "./components/dashboard/messaging/index"
 import LandingPage from "./pages/landing-page"
 import ProtectedRoute from "./layout/protectedroute"
+import StampDetail from "./components/dashboard/stamp/StampDetailed"
 import ProfilePage from "./pages/Profile/Profile"
-
 
 const user = {
   fullname: "Krish Mungase"
@@ -28,6 +28,7 @@ function App() {
       <div className='flex flex-col overflow-hidden bg-white '>
         <Routes path='/' >
           <Route path="/" element={<LandingPage />} />
+          <Route path="/stamp/:id" element={<StampDetail />} /> 
           <Route path="/dashboard" element={
             <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
               <DashboardLayout />
@@ -65,14 +66,13 @@ function App() {
                 </ProtectedRoute>
               }
             />
-
+            <Route path="stamp/:id" element={<StampDetail />} />
             <Route path="profile" element={
                <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
                <ProfilePage />
              </ProtectedRoute>
             }
             />
-
           </Route>
           <Route path="/auth">
             <Route path="login" element={<Login />} />

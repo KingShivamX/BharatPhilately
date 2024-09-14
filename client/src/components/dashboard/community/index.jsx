@@ -1,6 +1,7 @@
 import React from 'react'
 import PostSection from './components/post-section'
 import NewSection from './components/newsection'
+import Footer from '@/pages/common/footer'
 
 const Community = () => {
   return (
