@@ -9,10 +9,15 @@ import GradualSpacing from "@/components/magicui/gradual-spacing";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const LandingPage = () => {
+
+ 
+
+
+
   return (
     <div className="min-h-screen w-full container mx-auto px-4">
       {/* section 1 */}
-      <div className="py-16 flex flex-col items-center justify-center space-y-8">
+      <div  className="py-16 flex flex-col items-center justify-center space-y-8">
         <div className="text-center">
           <GradualSpacing
             className="text-5xl md:text-6xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600"
@@ -47,7 +52,7 @@ const LandingPage = () => {
           <div className="flex flex-wrap justify-center gap-8">
             {
               LandingPageCards.map((card) => (
-                <div key={card.id} className="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-64 md:w-80 transition-transform transform hover:scale-105">
+                <div key={card.id} id={card.id} className="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-64 md:w-80 transition-transform transform hover:scale-105">
                   <img src={card.path} alt="Stamp" className="w-full h-48 object-contain" />
                   <div className="p-6">
                     <h3 className="text-2xl font-semibold mb-3 text-gray-800">{card.title}</h3>

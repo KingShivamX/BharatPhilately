@@ -13,7 +13,7 @@ const NotFoundPage = () => {
         extra={
           <Button
             type="primary"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/dashboard/home")}
             className="px-6 rounded-full bg-[#2f667f] hover:bg-[#3d7e9c] text-white ring-0"
           >
             Back Home
