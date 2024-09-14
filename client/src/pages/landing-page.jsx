@@ -33,7 +33,7 @@ const LandingPage = () => {
               <IoIosArrowRoundForward className="size-5" />
             </Button>
           </Link>
-          <Link to={'/auth/register'}>
+          <Link to={'/dashboard/home'}>
             <Button className="px-6 py-3   rounded-lg shadow-md transition duration-300 ease-in-out">
               explore community
             </Button>
