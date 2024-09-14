@@ -7,8 +7,8 @@ import { BsCreditCard2Front } from "react-icons/bs";
 
 const ProfilePage = () => {
     const user = {
-        name: "Krishna Mungase",
-        username: "@phila",
+        name: "Narendra Modi",
+        username: "@narendra_modi",
         isRegsiteredforNPDA: true,
         profession: 'Student',
         Address: {
