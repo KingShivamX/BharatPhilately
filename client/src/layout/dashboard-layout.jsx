@@ -5,7 +5,7 @@ import AiChatBot from "@/components/ui/components/ai-chat";
 
 const isAuthenticated = true;
 const user = {
-  fullName: "Narendra Modi",
+  fullName: "Krish Mungase",
 };
 const DashboardLayout = () => {
   return (

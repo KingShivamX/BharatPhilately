@@ -5,8 +5,8 @@ import { Avatar } from "antd";
 
 const ProfilePage = () => {
     const user = {
-        name: "Narendra Modi",
-        username: "@narendra_modi",
+        name: "Krish Mungase",
+        username: "@krish_mungase",
         isRegsiteredforNPDA: true,
         profession: 'Student',
         Address: {
