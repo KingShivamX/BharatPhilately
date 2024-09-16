@@ -3,10 +3,20 @@ import React from 'react'
 import { AiOutlineLogout } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import dashboardLinks from '@/config/dashboard-links';
+import toast from 'react-hot-toast';
 
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom/';
 
 const DesktopDashboardSidebar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/auth/login');
+    toast.success("Logout Successfully")
+  }
+
   return (
     <div className="hidden lg:block">
       <div className="flex items-center justify-start px-6">
@@ -33,13 +43,14 @@ const DesktopDashboardSidebar = () => {
                 <span className="pl-4 text-lg text-white font-light tracking-wider">
                   {link.title}
                 </span>
-                
+
               </NavLink>
             ))}
         </div>
 
         <div className="border-t pt-2">
           <button
+            onClick={handleLogout}
             className="flex items-center px-4 py-3 hover:bg-secondary transition-all rounded-lg w-full"
           >
             <AiOutlineLogout className="size-6 text-white" />

@@ -11,7 +11,7 @@ const Community = () => {
         <PostSection />
       </div>
 
-      <div className="hidden md:block w-1/3  p-4 rounded-md shadow-md">
+      <div className="hidden md:block w-1/3 p-4 rounded-md shadow-md sticky top-6">
         <NewSection />
       </div>
     </div>

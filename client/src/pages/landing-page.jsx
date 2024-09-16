@@ -10,10 +10,6 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const LandingPage = () => {
 
- 
-
-
-
   return (
     <div className="min-h-screen w-full container mx-auto px-4">
       {/* section 1 */}

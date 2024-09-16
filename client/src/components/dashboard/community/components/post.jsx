@@ -1,22 +1,22 @@
 import { ThumbsUp, MessageSquareText, Share2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react'
+import { Avatar } from 'antd';
 
 const PostCard = ({ post }) => {
   const [expandedCommentId, setExpandedCommentId] = useState(null);
+  const navigate = useNavigate();
 
-  // Function to toggle the visibility of the comment section
-  const toggleCommentVisibility = (commentId) => {
-    setExpandedCommentId(expandedCommentId === commentId ? null : commentId);
-  };
+  const NavigateToProfile = () => {
+    navigate(`/dashboard/profile/${post?.author}`)
+  }
   return (
     <div key={post.id} className="bg-white border border-gray-300 rounded-lg shadow-sm p-4 mb-4">
 
-      <div className="flex items-center mb-3">
-        <img
-          src={`https://ui-avatars.com/api/?name=${post.author}&background=random`}
-          alt={post.author}
-          className="w-10 h-10 rounded-full mr-3"
-        />
+      <div className="flex items-center mb-3 space-x-2">
+        <Avatar className="bg-primary cursor-pointer h-10 w-10 text-lg font-bold flex items-center justify-center rounded-full" onClick={NavigateToProfile}>
+          {post?.author[0].toUpperCase()}
+        </Avatar>
         <div>
           <p className="text-sm font-semibold">{post.author}</p>
           <p className="text-xs text-gray-500">{post.timeAgo}</p>

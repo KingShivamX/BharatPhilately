@@ -1,7 +1,8 @@
 import React from 'react';
 import { MdOutlineVerified } from "react-icons/md";
 import { BsCalendar4Week } from "react-icons/bs";
-import { Avatar } from "antd";
+import { Avatar, Button } from "antd";
+import { Pencil } from 'lucide-react';
 
 const ProfilePage = () => {
     const user = {
@@ -25,7 +26,10 @@ const ProfilePage = () => {
             <div className='w-full max-w-4xl bg-white rounded-md shadow-sm'>
                 <div className='pb-2 border-b flex justify-between items-center px-4'>
                     <h1 className='text-lg font-semibold'>My Profile</h1>
-                    <button className='text-blue-500 hover:underline'>Edit</button>
+                    <Button className='font-semibold'>
+                        <Pencil className="w-3 h-3" />
+                        <span>Edit</span>
+                    </Button>
                 </div>
 
                 {/* Profile section */}

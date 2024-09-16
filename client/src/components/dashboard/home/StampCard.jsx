@@ -21,7 +21,7 @@ const StampCard = ({ stp }) => {
                 <div className='text-primary py-1 font-medium'>
                     Circle: {stp.PostalCircle}
                 </div>
-                <Button className="bg-primary text-white py-[0.15rem] px-5 hover:bg-[#3d7e9c] ring-0 rounded-full">
+                <Button className="bg-primary text-white py-[0.15rem] px-5 ring-0 rounded-full">
                     Rs: {stp.value}
                 </Button>
             </div>

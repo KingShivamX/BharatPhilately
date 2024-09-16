@@ -30,9 +30,7 @@ const DashboardLayout = () => {
                 </span>
               </div>
             </Link>
-
           </div>
-
         </div>
 
         <div className="flex-1 overflow-y-auto bg-white relative">
