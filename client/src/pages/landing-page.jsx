@@ -35,7 +35,7 @@ const LandingPage = () => {
             </Button>
           </Link>
           <Link to={'/dashboard/home'}>
-            <Button className="px-6 py-3   rounded-lg shadow-md transition duration-300 ease-in-out">
+            <Button className="px-6 py-3  rounded-lg shadow-md transition duration-300 ease-in-out">
               explore community
             </Button>
           </Link>

@@ -97,8 +97,35 @@ const ProfilePage = () => {
                 </div>
 
                 {/* Extra Section */}
-                <div className='bg-slate-500 text-white py-2 px-3 mt-5'>
-                    Additional Content
+                <div className='bg-slate-500 text-white py-4 px-5 mt-5 rounded-lg shadow-lg'>
+                    <h3 className='text-xl font-bold mb-2'>Achievements</h3>
+                    <p className='mb-4'>User has achieved the following rewards and badges in philately:</p>
+                    <div className='grid grid-cols-3 gap-4'>
+                        <div className='flex flex-col items-center'>
+                            <img
+                                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQzCKqTkn9KO-n6BE09lNG9yWcw7Y_Ll4OwA&s'
+                                alt='First Stamp Collector Badge'
+                                className='w-16 h-16 mb-2 rounded-full border-2 border-white'
+                            />
+                            <span className='text-center'>First Stamp Collector Badge</span>
+                        </div>
+                        <div className='flex flex-col items-center'>
+                            <img
+                                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1QZ7u9xTrUd46o8wVOHM-OkI56iNpr66rg&s'
+                                alt='Rare Stamps Expert Badge'
+                                className='w-16 h-16 mb-2 rounded-full border-2 border-white'
+                            />
+                            <span className='text-center'>Rare Stamps Expert Badge</span>
+                        </div>
+                        <div className='flex flex-col items-center'>
+                            <img
+                                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvab17mPG_nMUsIrG-Xa9a9ZF8RtQ327CNsg&s'
+                                alt='Philatelic Community Leader Badge'
+                                className='w-16 h-16 mb-2 rounded-full border-2 border-white'
+                            />
+                            <span className='text-center'>Philatelic Community Leader Badge</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
