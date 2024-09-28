@@ -1,23 +1,22 @@
 const LandingPageCards = [
   {
     id: "1",
-    title: "Collection 1",
-    path: "/img/image1.jpg",
-    description: "Discover unique stamps from different regions of India in this visually stunning collection, celebrating the diversity of Indian postal history.",
+    title: "Indian Freedom Struggle Stamps",
+    path: "/img/freedom.jpg",
+    description: "Explore a collection of stamps commemorating India's journey to independence, featuring leaders like Mahatma Gandhi, Subhash Chandra Bose, and events from the freedom movement.",
   },
   {
     id: "2",
-    title: "Collection 2",
-    path: "/img/image2.jpg",
-    description: "Discover unique stamps from different regions of India in this visually stunning collection, celebrating the diversity of Indian postal history.",
+    title: "Mahatma Gandhi Definitive Collection",
+    path: "/img/gandhi.jpg",
+    description: "A tribute to Mahatma Gandhi, showcasing stamps from various years, including rare editions issued on his birth centenary and other significant events.",
   },
   {
     id: "3",
-    title: "Collection 3",
-    path: "/img/image4.jpg",
-    description: "Discover unique stamps from different regions of India in this visually stunning collection, celebrating the diversity of Indian postal history.",
+    title: "Indian Wildlife & Nature",
+    path: "/img/tiger.jpg",
+    description: "A collection highlighting India's rich biodiversity, with stamps featuring iconic animals such as the Bengal tiger, elephants, peacocks, and rare species from protected areas.",
   },
 ]
 
-
-export default LandingPageCards
+export default LandingPageCards;

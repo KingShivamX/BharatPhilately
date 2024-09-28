@@ -15,7 +15,7 @@ const PostSection = () => {
       <div className='overflow-y-auto'>
         {
           Posts.map((post) => (
-            <PostCard id={post.id} post={post} />
+            <PostCard key={post.id} post={post} />
           ))
         }
       </div>

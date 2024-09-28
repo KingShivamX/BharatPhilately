@@ -1,4 +1,4 @@
-import latestNews from '@/config/latest-news';
+import realTimeNews from '@/config/latest-news';
 import React from 'react'
 
 const NewSection = () => {
@@ -7,7 +7,7 @@ const NewSection = () => {
       <p className='text-xl font-semibold'>Latest News</p>
       <div className='flex flex-col space-y-2 items-center justify-center '>
         {
-          latestNews.map((news) => (
+          realTimeNews.map((news) => (
             <div key={news.id} className='py-2 cursor-pointer hover:bg-gray-100 px-4 rounded-md'>
               <h3 className='text-sm font-medium'>{news.title}</h3>
               <p className='text-xs'>{news.description}</p>

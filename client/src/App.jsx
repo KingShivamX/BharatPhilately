@@ -14,8 +14,9 @@ import Notifications from "./components/dashboard/notifications/index"
 import Messaging from "./components/dashboard/messaging/index"
 import LandingPage from "./pages/landing-page"
 import ProtectedRoute from "./layout/protectedroute"
+import StampDetail from "./components/dashboard/stamp/StampDetailed"
 import ProfilePage from "./pages/Profile/Profile"
-
+import ResetPasswordPage from "./pages/auth/reset-password"
 
 const user = {
   fullname: "Krish Mungase"
@@ -28,6 +29,7 @@ function App() {
       <div className='flex flex-col overflow-hidden bg-white '>
         <Routes path='/' >
           <Route path="/" element={<LandingPage />} />
+          <Route path="/stamp/:id" element={<StampDetail />} />
           <Route path="/dashboard" element={
             <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
               <DashboardLayout />
@@ -40,7 +42,7 @@ function App() {
                   <Home />
                 </ProtectedRoute>
               }
-            />            
+            />
             <Route
               path="community"
               element={
@@ -65,14 +67,13 @@ function App() {
                 </ProtectedRoute>
               }
             />
-
+            <Route path="stamp/:id" element={<StampDetail />} />
             <Route path="profile" element={
-               <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
-               <ProfilePage />
-             </ProtectedRoute>
+              <ProtectedRoute isAuthenticated={isAuthenticated} user={user}>
+                <ProfilePage />
+              </ProtectedRoute>
             }
             />
-
           </Route>
           <Route path="/auth">
             <Route path="login" element={<Login />} />
@@ -80,6 +81,7 @@ function App() {
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
             <Route path="create-password" element={<CreatePasswordPage />} />
             <Route path="email-verification" element={<EmailVerificationPage />} />
+            <Route path="reset-password" element={<ResetPasswordPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

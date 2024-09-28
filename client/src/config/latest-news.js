@@ -1,44 +1,44 @@
-const latestNews = [
+const realTimeNews = [
   {
     id: 1,
-    title: "New Stamp Collection Released",
-    date: "2024-09-10",
-    description: "India Post launches a new stamp collection featuring national landmarks.",
-    imageUrl: "https://example.com/stamp-collection.jpg",
-    link: "https://example.com/news/new-stamp-collection"
+    title: "New International Stamp Series Released",
+    date: "2024-09-15",
+    description: "A new series of stamps featuring global landmarks has been launched.",
+    imageUrl: "https://example.com/international-stamps.jpg",
+    link: "https://example.com/news/international-stamp-series"
   },
   {
     id: 2,
-    title: "Philatelist Expo 2024 Announced",
-    date: "2024-09-05",
-    description: "The annual Philatelist Expo in Delhi will showcase rare and historic stamps.",
-    imageUrl: "https://example.com/expo.jpg",
-    link: "https://example.com/news/philatelist-expo-2024"
+    title: "Philately Workshops Begin in Major Cities",
+    date: "2024-09-14",
+    description: "India Post organizes philately workshops across major cities to promote stamp collecting.",
+    imageUrl: "https://example.com/philately-workshops.jpg",
+    link: "https://example.com/news/philately-workshops"
   },
   {
     id: 3,
-    title: "Digital Philately Platform Launched",
-    date: "2024-09-01",
-    description: "A new platform helps collectors manage their stamp collections online.",
-    imageUrl: "https://example.com/digital-platform.jpg",
-    link: "https://example.com/news/digital-philately-platform"
+    title: "Rare Stamp Auction Breaks Records",
+    date: "2024-09-13",
+    description: "A rare stamp collection was auctioned for a record-breaking amount.",
+    imageUrl: "https://example.com/rare-stamp-auction.jpg",
+    link: "https://example.com/news/rare-stamp-auction"
   },
   {
     id: 4,
-    title: "India Post Celebrates World Post Day",
-    date: "2024-09-09",
-    description: "India Post celebrates World Post Day with special events nationwide.",
-    imageUrl: "https://example.com/world-post-day.jpg",
-    link: "https://example.com/news/world-post-day-celebration"
+    title: "India Post Launches Philatelic App",
+    date: "2024-09-12",
+    description: "A new app by India Post allows collectors to manage their collections digitally.",
+    imageUrl: "https://example.com/philatelic-app.jpg",
+    link: "https://example.com/news/philatelic-app-launch"
   },
   {
     id: 5,
-    title: "Stamp Collection Workshops",
-    date: "2024-09-08",
-    description: "Workshops are organized to promote the art of stamp collecting.",
-    imageUrl: "https://example.com/workshops.jpg",
-    link: "https://example.com/news/stamp-collection-workshops"
+    title: "Stamp Collectors' Convention 2024 Announced",
+    date: "2024-09-11",
+    description: "The 2024 Stamp Collectors' Convention will take place in Mumbai this December.",
+    imageUrl: "https://example.com/collectors-convention.jpg",
+    link: "https://example.com/news/collectors-convention-2024"
   }
 ];
 
-export default latestNews;
+export default realTimeNews;

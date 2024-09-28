@@ -10,10 +10,6 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const LandingPage = () => {
 
- 
-
-
-
   return (
     <div className="min-h-screen w-full container mx-auto px-4">
       {/* section 1 */}
@@ -38,8 +34,8 @@ const LandingPage = () => {
               <IoIosArrowRoundForward className="size-5" />
             </Button>
           </Link>
-          <Link to={'/auth/register'}>
-            <Button className="px-6 py-3   rounded-lg shadow-md transition duration-300 ease-in-out">
+          <Link to={'/dashboard/home'}>
+            <Button className="px-6 py-3  rounded-lg shadow-md transition duration-300 ease-in-out">
               explore community
             </Button>
           </Link>
