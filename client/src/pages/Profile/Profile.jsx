@@ -21,6 +21,46 @@ const ProfilePage = () => {
         }
     }
 
+    const orders = [
+        {
+            paymentid: '334fcjoshkdf3',
+            date: 12,
+            month: 'AUG',
+            status: 'success',
+            amount: 150.00,
+        },
+        {
+            paymentid: '456guhijklm4',
+            date: 13,
+            month: 'AUG',
+            status: 'failure',
+            amount: 200.50,
+        },
+        {
+            paymentid: '789vbnmnope5',
+            date: 14,
+            month: 'AUG',
+            status: 'success',
+            amount: 75.25,
+        },
+        {
+            paymentid: '012qwerasdf6',
+            date: 15,
+            month: 'AUG',
+            status: 'failure',
+            amount: 120.00,
+        },
+        {
+            paymentid: '135zxcvbqwe7',
+            date: 16,
+            month: 'AUG',
+            status: 'success',
+            amount: 95.75,
+        },
+    ];
+
+
+
     return (
         <div className='w-full flex justify-center px-4 md:px-10 py-10'>
             <div className='w-full max-w-4xl bg-white rounded-md shadow-sm'>
@@ -125,6 +165,34 @@ const ProfilePage = () => {
                             />
                             <span className='text-center'>Philatelic Community Leader Badge</span>
                         </div>
+                    </div>
+                </div>
+
+                {/* Transctions */}
+                <div className='px-3 py-2 bg-[#fff] mt-4'>
+                    <div className='flex gap-4'>
+                        <div className='px-2 py-1 border shadow-sm bg-[#d7d7d7] rounded-sm'>Transactions</div>
+                        <div className='px-2 py-1  border shadow-sm bg-white rounded-sm'>Orders</div>
+                    </div>
+                    <div className=''>
+                        {
+                            orders.map(it => {
+                                return <div key={it.date} className='py-2 bg-white flex justify-between  items-center px-2 border-2 rounded-md border-[#b4afaf21] my-3'>
+                                    <div className='w-[40%] flex gap-4 items-center'>
+                                        <div className='text-[14px] font-[600]'>
+                                            <div className='text-center'>{it.date}</div>
+                                            <div>{it.month}</div>
+                                        </div>
+                                        <div>Payment ID: {it.paymentid}</div>
+                                    </div>
+
+                                    <div className='flex w-[40%] justify-between gap-10'>
+                                        <div className={it.status=='success'?'text-teal-600 font-[700] uppercase text-[13px]': ' font-[700] uppercase text-[13px] text-red-400'}>{it.status}</div>
+                                        <div className='font-[600] pr-3'>₹ {it.amount}</div>
+                                    </div>
+                                </div>
+                            })
+                        }
                     </div>
                 </div>
             </div>
