@@ -73,7 +73,9 @@ const ProfilePage = () => {
                 <div className='my-3 mt-4  '>
 
                     <h1 className='uppercase pb-3 font-[600] text-[18px] mt-3 border-b mb-5'>national philatelic deposit accout</h1>
+
                     {/* card */}
+                    
                     <div className='w-full flex justify-between '>
                     <div className='max-w-[30vw] min-w-[30vw] px-2 h-[200px] shadow-md relative bg-gradient-to-tr text-white from-teal-500 to-cyan-400 rounded-lg '>
                         <div className='flex justify-between items-center'>
